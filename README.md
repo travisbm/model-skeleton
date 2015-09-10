@@ -27,3 +27,38 @@ This folder structure should be suitable for starting a project that uses a data
 └── lib                 # Your ruby code (models, etc.) should go here
     └── all.rb          # Require this file to auto-require _all_ `.rb` files in `lib`
 ```
+
+1) Users.count = 50
+
+2) Items.order('price DESC').first(5)
+1.	Small Cotton Gloves
+2.	Small Wooden Computer
+3.	Assome Granite Pants
+4.	Sleek Wooden Hat
+5.	Ergonomic Steel Car
+
+3) Items.where(category: 'Books').order('price ASC').first
+⁃	Ergonomic Granite Chair
+
+4a) Users.where(id: Addresses.where(street: '6439 Zetta Hills').pluck(:user_id))
+⁃	Corrine Little
+
+4b) Addresses.where(user_id: 40)
+⁃	Second Address: 54369 Wolff Forges, Lake Bryon, CA, 31587
+
+5) 
+
+6) Items.where(Category: 'Tools').sum('price')
+⁃	7383
+
+7) Orders.sum('quantity')
+⁃	2125
+
+8)  
+
+9) 
+⁃	Users.create({id: Users.count + 1, first_name: 'Travis', last_name: 'Montgomery',  email: 'travisbm@gmail.com'})
+⁃	Orders.create({id: Orders.count + 1, user_id: 51, item_id: 4, quantity: 2})
+
+
+
